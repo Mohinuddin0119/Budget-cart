@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget cart</title>
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+     <link rel="stylesheet" href="./styles/style.css">
+
 </head>
-<body>
-    
+<body class="bg-white text-black min-h-screen">
+    <header>
+        <nav class="flex justify-around p-5 bg-[#656565] text-black">
+            <div>
+                <p class="text-2xl">Budget: <span id="budget" class=" budget-head">2500 </span>$</p>
+            </div>
+            <div>
+                <p class="text-2xl">Cart: <span id="cart " class="budget-head">0</span></p>
+            </div>
+            <div>
+                <p class="text-2xl">Left: <span id="left" class="budget-head">6</span></p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex flex-col md:flex-row justify-around items-center ">
+            <!-- cart container -->
+             <!-- part of cart -->
+            <div class="lg:flex-1 cart p-10 gap-5 grid grid-cols-1 md:grid-cols-2 w-full">
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Tamim Iqbal</h3>
+                    <p>Price: <span>300</span> $</p>
+                    <p>Category: <span>Bat</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Sabbir Rahman</h3>
+                    <p>Price: <span>400</span> $</p>
+                    <p>Category: <span>Bat</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Miraz</h3>
+                    <p>Price: <span>500</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Mahmudullah</h3>
+                    <p>Price: <span>600</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+            </div>
+            <!-- my cart -->
+            <div class="lg:flex-1 shadow-lg shadow-black p-5 m-5">
+                <h1 class="font-bold text-2xl text-center p-2">My Cart</h1>
+                <hr>
+                <div class="flex justify-center gap-5 p-2 shadow-lg mb-4">
+                    <p>Name</p>
+                    <p>Price</p>
+                    <p>Category</p>
+                </div>
+                <div id="selected-container" class="m-4"></div>
+                <hr>
+                <p class="font-bold text-center p-2">Total Cost: <span id="total-cost">0</span> $</p>
+                <hr >
+                <div class="text-center px-10 py-2 flex justify-center items-center gap-3">
+                    <input class="bg-gray-100 w-36 h-10 shadow-lg border border-gray-400 px-4" type="text" placeholder="Coupon Code">
+                    <button class="btn text-white" type="apply">Apply</button>
+                </div>
+                <hr>
+                <p class="font-bold text-center p-2">Grand Total: <span>0</span> $</p>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
