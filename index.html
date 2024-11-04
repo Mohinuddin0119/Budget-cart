@@ -18,7 +18,7 @@
                 <p class="text-2xl">Budget: <span id="budget" class=" budget-head">2500 </span>$</p>
             </div>
             <div>
-                <p class="text-2xl">Cart: <span id="cart " class="budget-head">0</span></p>
+                <p class="text-2xl">Cart: <span id="cart" class="budget-head">0</span></p>
             </div>
             <div>
                 <p class="text-2xl">Left: <span id="left" class="budget-head">6</span></p>
@@ -26,10 +26,10 @@
         </nav>
     </header>
     <main>
-        <section class="flex flex-col md:flex-row justify-around items-center ">
+        <section class="flex flex-col lg:flex-row justify-around items-center ">
             <!-- cart container -->
              <!-- part of cart -->
-            <div class="lg:flex-1 cart p-10 gap-5 grid grid-cols-1 md:grid-cols-2 w-full">
+            <div class="flex-1 cart p-10 gap-5 grid grid-cols-1 md:grid-cols-2 w-full">
                 <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
                     <h3>Tamim Iqbal</h3>
                     <p>Price: <span>300</span> $</p>
@@ -54,9 +54,33 @@
                     <p>Category: <span>All rounder</span></p>
                     <button class="btn text-white">Add to Cart</button>
                 </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Musfiq</h3>
+                    <p>Price: <span>600</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Saifuddin</h3>
+                    <p>Price: <span>600</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Lord Shanto</h3>
+                    <p>Price: <span>600</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg shadow-black p-10 flex flex-col justify-center items-center space-y-3">
+                    <h3>Taskin</h3>
+                    <p>Price: <span>600</span> $</p>
+                    <p>Category: <span>All rounder</span></p>
+                    <button class="btn text-white">Add to Cart</button>
+                </div>
             </div>
             <!-- my cart -->
-            <div class="lg:flex-1 shadow-lg shadow-black p-5 m-5">
+            <div class="w-3/4 lg:flex-1 shadow-lg shadow-black p-5 mr-5 ml-5 mb-10">
                 <h1 class="font-bold text-2xl text-center p-2">My Cart</h1>
                 <hr>
                 <div class="flex justify-center space-x-10 p-2 shadow-lg mb-4">
@@ -69,8 +93,8 @@
                 <p class="font-bold text-center p-2">Total Cost: <span id="total-cost">0</span> $</p>
                 <hr >
                 <div class="text-center px-10 py-2 flex justify-center items-center gap-3">
-                    <input class="bg-gray-100 w-36 h-10 shadow-lg border border-gray-400 px-4" type="text" placeholder="Coupon Code">
-                    <button class="btn text-white" type="apply">Apply</button>
+                    <input id="coupon-code" class="bg-gray-100 w-36 h-10 shadow-lg border border-gray-400 px-4" type="text" placeholder="Coupon Code">
+                    <button onclick="updateGrandTotal('apply-btn')" class="btn text-white" type="apply">Apply</button>
                 </div>
                 <hr>
                 <p class="font-bold text-center p-2">Grand Total: <span id="grand-total">0</span> $</p>
